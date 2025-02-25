@@ -1,0 +1,82 @@
+# Project: intakt
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ 7.3 on 08-04-11 11:50
+
+WXLIBNAME = wxmsw28
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = "windres.exe"
+OBJ       = Objects/MingW/intaktApp.o Objects/MingW/intaktDlg.o Objects/MingW/wklejka.o Objects/MingW/buffer.o Objects/MingW/intaktTray.o Objects/MingW/lstPOS.o Objects/MingW/DBPrintSettings.o Objects/MingW/RodzajZgloszenia.o Objects/MingW/TreeCtrlComboPopup.o Objects/MingW/tools.o Objects/MingW/MyComboBox.o Objects/MingW/ListBoxPopup.o Objects/MingW/DialogEditApp.o Objects/MingW/ThreadAutoRunApp.o Objects/MingW/IntaktConf.o Objects/MingW/md5file.o Objects/MingW/intakt_private.res
+LINKOBJ   = "Objects/MingW/intaktApp.o" "Objects/MingW/intaktDlg.o" "Objects/MingW/wklejka.o" "Objects/MingW/buffer.o" "Objects/MingW/intaktTray.o" "Objects/MingW/lstPOS.o" "Objects/MingW/DBPrintSettings.o" "Objects/MingW/RodzajZgloszenia.o" "Objects/MingW/TreeCtrlComboPopup.o" "Objects/MingW/tools.o" "Objects/MingW/MyComboBox.o" "Objects/MingW/ListBoxPopup.o" "Objects/MingW/DialogEditApp.o" "Objects/MingW/ThreadAutoRunApp.o" "Objects/MingW/IntaktConf.o" "Objects/MingW/md5file.o" Objects/MingW/intakt_private.res
+LIBS      = -L"C:/Program Files/Dev-Cpp/Lib" -mwindows -lwxmsw28 -lwxmsw28_gl -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregex -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lversion -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32 ../tcoder/Output/MingW/libtcoder.a "d:/Program Files/Dev-Cpp/lib/libwxmsw28_netutils.a" ../lib/md5.a ../wxspellchecker/lib/wxspellchecker.a   
+INCS      = -I"C:/Program Files/Dev-Cpp/Include" -I"C:/Documents and Settings/pkulinski/Pulpit/kompilacja/include" -I"../wxspellchecker/include" -I"../wxspellchecker/MySpell" -I"../wxspellchecker/samples/wxWidgets"
+CXXINCS   = -I"C:/Program Files/Dev-Cpp/lib/gcc/mingw32/3.4.5/include" -I"C:/Program Files/Dev-Cpp/include/c++/3.4.5/backward" -I"C:/Program Files/Dev-Cpp/include/c++/3.4.5/mingw32" -I"C:/Program Files/Dev-Cpp/include/c++/3.4.5" -I"C:/Program Files/Dev-Cpp/include" -I"C:/Program Files/Dev-Cpp/" -I"C:/Program Files/Dev-Cpp/include/3rdparty/wx/plotctrl" -I"C:/Program Files/Dev-Cpp/include/3rdparty/wx/sheet" -I"C:/Program Files/Dev-Cpp/include/3rdparty/wx/treemultictrl" -I"C:/Program Files/Dev-Cpp/include/3rdparty/wx/things" -I"C:/Program Files/Dev-Cpp/include/3rdparty/wx" -I"C:/Program Files/Dev-Cpp/include/3rdparty" -I"C:/Program Files/Dev-Cpp/include/common/wx/msw" -I"C:/Program Files/Dev-Cpp/include/common/wx/generic" -I"C:/Program Files/Dev-Cpp/include/common/wx/fl" -I"C:/Program Files/Dev-Cpp/include/common/wx/gizmos" -I"C:/Program Files/Dev-Cpp/include/common/wx/html" -I"C:/Program Files/Dev-Cpp/include/common/wx/mmedia" -I"C:/Program Files/Dev-Cpp/include/common/wx/net" -I"C:/Program Files/Dev-Cpp/include/common/wx/ogl" -I"C:/Program Files/Dev-Cpp/include/common/wx/plot" -I"C:/Program Files/Dev-Cpp/include/common/wx/protocol" -I"C:/Program Files/Dev-Cpp/include/common/wx/stc" -I"C:/Program Files/Dev-Cpp/include/common/wx/svg" -I"C:/Program Files/Dev-Cpp/include/common/wx/xml" -I"C:/Program Files/Dev-Cpp/include/common/wx/xrc" -I"C:/Program Files/Dev-Cpp/include/common/wx" -I"C:/Program Files/Dev-Cpp/include/common" -I"C:/Documents and Settings/pkulinski/Pulpit/kompilacja/include" -I"../wxspellchecker/include" -I"../wxspellchecker/MySpell" -I"../wxspellchecker/samples/wxWidgets"
+RCINCS    = --include-dir "C:/PROGRA~1/Dev-Cpp/include/common"
+BIN       = Output/MingW/intakt.exe
+DEFINES   = -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__
+CXXFLAGS  = $(CXXINCS) $(DEFINES) -fno-exceptions -fno-pcc-struct-return -fstrict-aliasing -Wall -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__   -fexceptions -fexpensive-optimizations -O3
+CFLAGS    = $(INCS) $(DEFINES) -fno-exceptions -fno-pcc-struct-return -fstrict-aliasing -Wall -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__   -fexceptions -fexpensive-optimizations -O3
+GPROF     = gprof.exe
+RM        = rm -f
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(LINKOBJ) "$(BIN)"
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "$(BIN)" $(LIBS) 
+
+Objects/MingW/intaktApp.o: $(GLOBALDEPS) intaktApp.cpp intaktApp.h intaktDlg.h wklejka.h intaktTray.h md5file.h TreeCtrlComboPopup.h MyComboBox.h ListBoxPopup.h ThreadAutoRunApp.h
+	$(CPP) -c intaktApp.cpp -o Objects/MingW/intaktApp.o $(CXXFLAGS)
+
+Objects/MingW/intaktDlg.o: $(GLOBALDEPS) intaktDlg.cpp intaktApp.h Objects/MingW/intakt_private.h intaktTray.h DBPrintSettings.h intaktDlg.h wklejka.h intaktTray.h md5file.h TreeCtrlComboPopup.h MyComboBox.h ListBoxPopup.h ThreadAutoRunApp.h intaktDlg.h lstPOS.h intaktDlg.h RodzajZgloszenia.h IntaktConf.h intaktDlg.h ../include/wxdll.h ../include/tcoder.h buffer.h tools.h ../include/wxdll.h ../include/tcoder.h TreeCtrlComboPopup.h DialogEditApp.h Images/awxled.xpm Images/awxledin.xpm Images/ID_MM1_XPM.xpm Images/intaktDlg_WxStaticBitmap2_XPM.xpm Images/Self_intaktDlg_XPM.xpm Images/intaktDlg_btDeleteDatabase_XPM.xpm Images/intaktDlg_ctx_help_XPM.xpm Images/intaktDlg_WxBitmapButton6_XPM.xpm Images/intaktDlg_WxBitmapButton5_XPM.xpm Images/intaktDlg_btn_getpos_XPM.xpm Images/intaktDlg_btn_getadm_XPM.xpm Images/intaktDlg_btn_getusr_XPM.xpm Images/intaktDlg_usun_XPM.xpm Images/intaktDlg_Save_XPM.xpm Images/intaktDlg_WxBitmapButton4_XPM.xpm Images/intaktDlg_WxBitmapButton2_XPM.xpm Images/intaktDlg_WxBitmapButton1_XPM.xpm Images/db_connection.xpm Images/intaktDlg_bbCRText_XPM.xpm Images/intaktDlg_bbWersja_XPM.xpm Images/macro.xpm Images/macrom.xpm Images/intaktDlg_WxBitmapButton8_XPM.xpm Images/intaktDlg_WxBitmapButton8d_XPM.xpm Images/intaktDlg_WxBitmapButton9_XPM.xpm Images/intaktDlg_WxBitmapButton10_XPM.xpm Images/pisownia.xpm Images/ctx_help.xpm Images/run.xpm
+	$(CPP) -c intaktDlg.cpp -o Objects/MingW/intaktDlg.o $(CXXFLAGS)
+
+Objects/MingW/wklejka.o: $(GLOBALDEPS) wklejka.cpp wklejka.h
+	$(CPP) -c wklejka.cpp -o Objects/MingW/wklejka.o $(CXXFLAGS)
+
+Objects/MingW/buffer.o: $(GLOBALDEPS) buffer.cpp buffer.h
+	$(CPP) -c buffer.cpp -o Objects/MingW/buffer.o $(CXXFLAGS)
+
+Objects/MingW/intaktTray.o: $(GLOBALDEPS) intaktTray.cpp intaktTray.h
+	$(CPP) -c intaktTray.cpp -o Objects/MingW/intaktTray.o $(CXXFLAGS)
+
+Objects/MingW/lstPOS.o: $(GLOBALDEPS) lstPOS.cpp lstPOS.h intaktDlg.h wklejka.h intaktTray.h md5file.h TreeCtrlComboPopup.h MyComboBox.h ListBoxPopup.h ThreadAutoRunApp.h
+	$(CPP) -c lstPOS.cpp -o Objects/MingW/lstPOS.o $(CXXFLAGS)
+
+Objects/MingW/DBPrintSettings.o: $(GLOBALDEPS) DBPrintSettings.cpp DBPrintSettings.h intaktDlg.h wklejka.h intaktTray.h md5file.h TreeCtrlComboPopup.h MyComboBox.h ListBoxPopup.h ThreadAutoRunApp.h intaktApp.h
+	$(CPP) -c DBPrintSettings.cpp -o Objects/MingW/DBPrintSettings.o $(CXXFLAGS)
+
+Objects/MingW/RodzajZgloszenia.o: $(GLOBALDEPS) RodzajZgloszenia.cpp RodzajZgloszenia.h IntaktDlg.h wklejka.h intaktTray.h md5file.h TreeCtrlComboPopup.h MyComboBox.h ListBoxPopup.h ThreadAutoRunApp.h
+	$(CPP) -c RodzajZgloszenia.cpp -o Objects/MingW/RodzajZgloszenia.o $(CXXFLAGS)
+
+Objects/MingW/TreeCtrlComboPopup.o: $(GLOBALDEPS) TreeCtrlComboPopup.cpp TreeCtrlComboPopup.h
+	$(CPP) -c TreeCtrlComboPopup.cpp -o Objects/MingW/TreeCtrlComboPopup.o $(CXXFLAGS)
+
+Objects/MingW/tools.o: $(GLOBALDEPS) tools.cpp tools.h ../include/wxdll.h ../include/tcoder.h TreeCtrlComboPopup.h wklejka.h
+	$(CPP) -c tools.cpp -o Objects/MingW/tools.o $(CXXFLAGS)
+
+Objects/MingW/MyComboBox.o: $(GLOBALDEPS) MyComboBox.cpp MyComboBox.h
+	$(CPP) -c MyComboBox.cpp -o Objects/MingW/MyComboBox.o $(CXXFLAGS)
+
+Objects/MingW/ListBoxPopup.o: $(GLOBALDEPS) ListBoxPopup.cpp ListBoxPopup.h
+	$(CPP) -c ListBoxPopup.cpp -o Objects/MingW/ListBoxPopup.o $(CXXFLAGS)
+
+Objects/MingW/DialogEditApp.o: $(GLOBALDEPS) DialogEditApp.cpp DialogEditApp.h Images/Self_DialogEditApp_XPM.xpm
+	$(CPP) -c DialogEditApp.cpp -o Objects/MingW/DialogEditApp.o $(CXXFLAGS)
+
+Objects/MingW/ThreadAutoRunApp.o: $(GLOBALDEPS) ThreadAutoRunApp.cpp ThreadAutoRunApp.h
+	$(CPP) -c ThreadAutoRunApp.cpp -o Objects/MingW/ThreadAutoRunApp.o $(CXXFLAGS)
+
+Objects/MingW/IntaktConf.o: $(GLOBALDEPS) IntaktConf.cpp tools.h ../include/wxdll.h ../include/tcoder.h TreeCtrlComboPopup.h IntaktConf.h intaktDlg.h wklejka.h intaktTray.h md5file.h TreeCtrlComboPopup.h MyComboBox.h ListBoxPopup.h ThreadAutoRunApp.h Images/Self_IntaktConf_XPM.xpm Images/IntaktConf_sel_cfgsound_XPM.xpm
+	$(CPP) -c IntaktConf.cpp -o Objects/MingW/IntaktConf.o $(CXXFLAGS)
+
+Objects/MingW/md5file.o: $(GLOBALDEPS) md5file.cpp md5file.h
+	$(CPP) -c md5file.cpp -o Objects/MingW/md5file.o $(CXXFLAGS)
+
+Objects/MingW/intakt_private.res: Objects/MingW/intakt_private.rc intaktApp.rc 
+	$(WINDRES) --input-format=rc -o Objects/MingW/intakt_private.res $(RCINCS) Objects/MingW/INTAKT~1.RC -O coff
